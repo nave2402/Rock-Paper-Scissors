@@ -1,0 +1,59 @@
+Python programming:
+
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+print("Walcome to a Rock, Paper, Scissors game! :)\n")
+Your_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+if Your_choice == 0:
+  print("\nYou choose Rock \n" + rock)
+elif Your_choice == 1:
+  print("\nYou choose Paper \n" + paper  )
+elif Your_choice == 2:
+    print("\nYou choose Scissors \n" + scissors)  
+else:
+  print("I'm sorry but you have a mistake, please try again")
+
+random_int = random.randint(0,2)
+if random_int == 0:
+ print("The computer choose Rock \n"+ rock)
+elif random_int == 1:
+  print("The computer choose Paper \n" + paper)
+elif random_int == 2:
+    print("The computer choose Scissors \n" + scissors) 
+
+if random_int < Your_choice:
+  print("You win !! 🤩")
+elif Your_choice == 2 and random_int == 0:
+  print("You lose.. 😭")  
+elif Your_choice == 0 and random_int == 2:
+    print("You win !! 🤩")    
+elif random_int == Your_choice:
+  print("It's a draw, let's play again")
+else:
+     print("You lose.. 😭")
